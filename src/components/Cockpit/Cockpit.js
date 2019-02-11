@@ -29,3 +29,16 @@ const cockpit = props => {
 };
 
 export default cockpit;
+
+/*
+Following along on another way to write this component:
+
+import React from 'react';
+
+const cockpit = (props) => {
+return ();
+
+};
+
+export default cockpit;
+*/
