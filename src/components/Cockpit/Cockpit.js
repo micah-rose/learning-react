@@ -1,8 +1,23 @@
 import React from "react";
+//import React, { useEffect } from "react";
 import classes from "./Cockpit.css";
 import Aux from "../../hoc/Aux";
 
 const cockpit = props => {
+//Uses 16.8 React - React Hooks
+  //useEffect(
+  //  () => {
+  //    console.log("[Cockpit.js] useEffect");
+  //    //Http request...
+  //    setTimeout(() => {
+  //      alert("Saved data to cloud!");
+  //    }, 1000);
+  //  },
+  //  [props.persons]
+  //);
+
+  //useEffect();
+
   const assignedClasses = [];
   let btnClass = classes.Button;
 

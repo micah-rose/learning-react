@@ -22,15 +22,15 @@ class Persons extends PureComponent {
     );
   }
 
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   console.log(
-  //     "[UPDATE Persons.js] Inside shouldComponentUpdate",
-  //     nextProps,
-  //     nextState
-  //   );
-  //   //return nextProps.persons !== this.props.persons;
-  //   return true;
-  // }
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log(
+      "[UPDATE Persons.js] Inside shouldComponentUpdate",
+      nextProps,
+      nextState
+    );
+    //return nextProps.persons !== this.props.persons;
+    return true;
+  }
 
   componentWillUpdate(nextProps, nextState) {
     console.log(
