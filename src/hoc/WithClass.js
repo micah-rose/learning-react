@@ -7,7 +7,7 @@ const withClass = props => (
 export default withClass;
 
 /* Another approach to HOC
-const withClass = (className) => {
+const withClass = (WrappedComponent, className) => {
     return (props) => (
         <div className={className}>
             <WrappedComponent />

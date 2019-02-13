@@ -1,10 +1,14 @@
 import React from "react";
-//import React, { useEffect } from "react";
+//import React, { useEffect, useRef } from "react";
 import classes from "./Cockpit.css";
 import Aux from "../../hoc/Aux";
+import AuthContext from "../../context/auth-context";
 
 const cockpit = props => {
-//Uses 16.8 React - React Hooks
+  //Uses 16.8 React - React Hooks
+  //const toggleButtonRef = useRef(null);
+
+  //Uses 16.8 React - React Hooks
   //useEffect(
   //  () => {
   //    console.log("[Cockpit.js] useEffect");
@@ -12,6 +16,7 @@ const cockpit = props => {
   //    setTimeout(() => {
   //      alert("Saved data to cloud!");
   //    }, 1000);
+  //    toggleButtonRef.current.click();
   //  },
   //  [props.persons]
   //);
@@ -36,9 +41,16 @@ const cockpit = props => {
     <Aux>
       <h1>{props.appTitle}</h1>
       <p className={assignedClasses.join(" ")}>This is really working!</p>
-      <button className={btnClass} onClick={props.clicked}>
+      <button
+        //ref = {toggleButtonRef}
+        className={btnClass}
+        onClick={props.clicked}
+      >
         Toggle Persons
       </button>
+      <AuthContext.Consumer>
+        {context => <button onClick={context.login}>Log In</button>}
+      </AuthContext.Consumer>
     </Aux>
   );
 };
