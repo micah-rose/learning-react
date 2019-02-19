@@ -55,7 +55,7 @@ const cockpit = props => {
   );
 };
 
-export default cockpit;
+export default React.memo(cockpit);
 
 /*
 Following along on another way to write this component:
